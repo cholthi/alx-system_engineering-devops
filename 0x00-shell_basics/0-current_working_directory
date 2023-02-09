@@ -1,4 +1,2 @@
 #!/bin/bash
-BASEDIR=$(pwd)
-
-echo "${BASEDIR}"
+echo "$(pwd)"
