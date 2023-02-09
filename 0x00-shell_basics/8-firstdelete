@@ -1,0 +1,2 @@
+#!/bin/bash
+rm "$(dirname $(mktemp -u))/my_first_directory/betty"
