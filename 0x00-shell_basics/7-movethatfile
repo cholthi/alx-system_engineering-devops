@@ -1,0 +1,3 @@
+#!/bin/bash
+tmpdir="$(dirname $(mktemp -u))/my_first_directory"
+mv "$(dirname $(mktemp -u))/betty" $tmpdir
