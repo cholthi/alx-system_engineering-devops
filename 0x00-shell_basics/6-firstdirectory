@@ -1,3 +1,2 @@
 #!/bin/bash
-tmpdir=$(dirname $(mktemp -u))
-mkdir "$tmpdir/my_first_directory"
+mkdir "$(dirname $(mktemp -u))/my_first_directory"
