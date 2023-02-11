@@ -1,2 +1,2 @@
 #!/bin/bash
-[ "$(stat -c '%U' hello)" == "guillaume" ] && chown betty hello
+find . -name 'hello' -user guillaume -exec chown betty {} +
