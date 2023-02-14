@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name "*.gif" | tr -d '.gif' | sort -n
+find . -type f -name "*.gif" | tr -d '.gif' | LC_COLLATE=C sort
