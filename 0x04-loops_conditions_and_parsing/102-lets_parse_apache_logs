@@ -1,2 +1,6 @@
 #!/usr/bin/env bash
+#Parses apache log file
+#Displays a visitor IP and status code
+
+
 awk '{print $1 " " $9}' apache-access.log
