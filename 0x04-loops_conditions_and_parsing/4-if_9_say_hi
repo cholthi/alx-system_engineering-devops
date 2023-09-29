@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+#Displays Best Schhool 10 times
+#Outputs Hi on 9th iteration
+
+
 x=1
 while [ $x -le 10 ]
 do

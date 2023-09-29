@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+#Outputs Best School 10 times
+
+
 x=1
 until [ $x -gt 10 ]
 do

@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+#Outputs FizzBuzz of the countter is a multiple of 5 and 3
+#Outputs Fizz if a countter is a multiple of 3
+#Outputs Buzz if a counter is a multiple of 5
+
+
 for d in {1..100}
 do
 	if (( d%3 == 0 && d%5 == 0 ))

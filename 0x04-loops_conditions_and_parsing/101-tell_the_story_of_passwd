@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+#Parses /etc/passwd file and create a string
+#mixed the vaules from file
+
+
 while IFS=':' read -r username password uid gid info home shell; do
   echo "The user $username is part of the $gid gang,"\
   "lives in $home and rides $shell."\

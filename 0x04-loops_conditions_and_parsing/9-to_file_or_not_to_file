@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+#Provides imformation on school file
+
+
 inputfile="school"
 if [ -e $inputfile ]
 then

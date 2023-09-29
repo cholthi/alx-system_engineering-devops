@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+#Parse /etc/passwd and cuts username,
+#user id and home directory
+
+
 while read -r passwd; do
   echo "$passwd" | cut -d ':' -f1,3,6
 done < "/etc/passwd"

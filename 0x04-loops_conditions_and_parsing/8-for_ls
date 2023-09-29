@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+#displays entries of current directory in list format
+#Cuts out the number prefix
+
+
 list=$(ls)
 for i in "${list[@]}"
 do
