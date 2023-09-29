@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+for d in {1..100}
+do
+	if (( d%3 == 0 && d%5 == 0 ))
+	then
+		echo "FizzBuzz"
+	elif (( d%3 == 0 ))
+	then
+		echo "Fizz"
+	elif (( d%5 == 0 ))
+	then
+		echo "Buzz"
+	else
+		echo $d
+	fi
+done
+	
