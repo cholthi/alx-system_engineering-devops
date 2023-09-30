@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Displayscurrent running processes
+#Shows all processes of all users including those
+#without attached terminal
+
+
+ps auxf
