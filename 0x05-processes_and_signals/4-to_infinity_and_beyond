@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Prints a string to stdout infinetly
+# Use ctrl+c to stop the script
+
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
