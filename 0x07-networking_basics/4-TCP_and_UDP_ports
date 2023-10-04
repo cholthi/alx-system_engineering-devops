@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Shows listening ports (both TCP and UDP ports)
+
+
+netstat -tulnp
