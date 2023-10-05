@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Show all attached IPv2 IPs to this computer
+
+ifconfig | grep -Eo "inet (addr:)?([0-9]*\.){3}[0-9]*" | cut -b 11-
+
+
+
+
+
