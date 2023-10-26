@@ -1,0 +1,12 @@
+[0-simple_web_stack]!(https://drive.google.com/file/d/1AccNviH5ddXtx_egKOMR5OyUR6NNYBJJ/view?usp=sharing)
+
+- Server here is a HTTP server  running nginx
+- DNS translate domain names to public IP addresses
+- DNS returns a A record
+- Web server serves web resources over http
+- Application server hosts the source code of the application
+- Database provides data persistence for the application server
+- The Server uses HTTP over TCP/IP network protocol suite to communicate with user computer
+- The server hosting Nginx is a single point of failure of this infrastructure as, if it goes down, our application server will not be reachable
+- Downtime can be implemented by by pointing our application domain to server hosting a static maintenance page
+- This web infrastructure is not scalable as it is running only one instance of the application server
