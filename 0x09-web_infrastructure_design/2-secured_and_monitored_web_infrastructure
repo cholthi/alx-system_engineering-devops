@@ -1,4 +1,4 @@
-![2-secured_and_monitored_web_infrastructure](https://drive.google.com/file/d/1rIF6Fi8o__xX1-dMAkerPkIl52Kstedx/view?usp=sharing)
+https://drive.google.com/file/d/1rIF6Fi8o__xX1-dMAkerPkIl52Kstedx/view?usp=sharing
 
 ### For every additional element, why you are adding it?
 - The first firewall acts as the first line of defense for upstream servers, it checks the rules after receiving the requests and could drop the following requests. It also protects against DoS attacks. The second firewall is working in the server to prevent someone hacking depending of the requests, and the third firewall acts as a circuit-level firewalls, inspect the transaction of the information
