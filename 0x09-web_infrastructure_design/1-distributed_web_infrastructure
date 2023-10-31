@@ -1,0 +1,16 @@
+[1-distributed_web_infrastructure]!(https://drive.google.com/file/d/1IUklAHlqWySfM1gj747M3eJR2e2CCHC3/view?usp=sharing)
+
+
+###For every additional element, why you are adding it?
+This new infrastructure is composed of three servers, two master servers and one slave server. The master servers will be configured in Active-Active mode and will receive requests from a load balancer that is using Round-Robin algorithm. While the slave server can be sepcialized that takes care of expensive elements of the master servers such as serving a Read-only source of data. Scalling this infrastructure means just adding more master servers to the active-active setup. This scalling strategy is called vertical scalling.
+
+###What distribution algorithm your load balancer is configured with and how it works?
+Our load-balancer is using Round-Robin algorithm for request distribution. This algorithm evenly distributes the request accross the master servers.This load-balancer will aim to average the requests handled by each configured server.
+
+###Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between?
+Our load-balancer is using Active-Active confifuration. The active/active cluster is is typically made of at least two nodes, both actively running the same type of services cocurrently. Th purpose is to achieve load balancing by distributing requests to different servers to avoid overloading a single server.
+Other the hand, Active-Passive configuration is also consists of atleast two servers, however not all servers are going to be active simultaneously. In this configuration, while one servers are active, the other servers are passively waiting to be active as backup in case of one primary server is down. Like the Actve/Active setup, it is important for the servers in Active/passive cluster to have exact same configuration with primary servers.
+
+###How a database Primary-Replica (Master-Slave) cluster works?
+A database primary-Replica (Master-Replica) is a mechanism which enables data of one database  server (the master) to be copied (replicated) to one or more database servers (the salves), in order for all users shae the same level of information. This process leads to a distributed database in which users can quickly access data without interfering with each other. 
+The database replication method can either be synchronous or asynchronous, In the former one, the replication process is done from the client server to the model serverand then replicated to all the replica servers before the client is notified of data replication. The method of replication may take loner to verify if the data is in sync. As in the synchronous replication, asynchronous replication is done by sending data from the client t the model server. followed by a confirmation order to the client, who finally gives permission of copying replicas at an unspecified or monitored pace. A notable difference between the primary server and the replic server regarding the application is that the primary primary server is regarded as a  single source of truth (authoritative) while the replica server is synchrononized to it.

@@ -1,12 +1,34 @@
 [0-simple_web_stack]!(https://drive.google.com/file/d/1AccNviH5ddXtx_egKOMR5OyUR6NNYBJJ/view?usp=sharing)
 
-- Server here is a HTTP server  running nginx
-- DNS translate domain names to public IP addresses
-- DNS returns a A record
-- Web server serves web resources over http
-- Application server hosts the source code of the application
-- Database provides data persistence for the application server
-- The Server uses HTTP over TCP/IP network protocol suite to communicate with user computer
-- The server hosting Nginx is a single point of failure of this infrastructure as, if it goes down, our application server will not be reachable
-- Downtime can be implemented by by pointing our application domain to server hosting a static maintenance page
-- This web infrastructure is not scalable as it is running only one instance of the application server
+
+###What is a server?
+Servers are pyhsical machines (refered to hardwares as well), virtual machines on the cloud inform of VPS. A server can also be a software that serve or provide functionality to other softwares known as clients.
+
+###What is the role of the domain name?
+The domain name provides memorable name to an IP address routable through internet or a private network. Domain names are translanted from text names to IP address by a service called DNS.
+
+###What type of DNS record www is in www.foobar.com?
+www is a subdomain of the root domain foobar.com
+
+###What is the role of the web server?
+A web sever serves resources over a network using HTTP protocol or any mime types supported and agreed upon with a client.
+
+###What is the role of the application server?
+An application server is a process that works in concert with a web server to provides more functionality to the client. When using a stateless protocol like http, application server proivides dynamic data and fuether proccesses client requests to provide advanced stateful features. An example of an application server can be a python application sitting behind a reverse proxy.
+
+###What is the role of the database?
+The database organises the application server data and sets it for long term persistence. The database also makes the CRUD needs of an application easy while working with slow medium storages. Databases work differently according to the domain areas or problem, below are some of the most common database types.
+
+- _Relation Databases__: Organises data in tables, rows and columns and uses a DSL languange called SQL e.g Mysql, Postgre
+- _Document databases_: Document databases provides a schemaless storage of data usually using a structured document types e.g Mongodb
+- _Key-value databases_: Key value storage provides a quick usually in-memory storage of a data. key value are usually quicker than all other database types but luck the persistence of relational types e.g Redis or memcached
+
+###What is the server using to communicate with the computer of the user requesting the website?
+The server is using Hypertext Transfer Protocol (HTTP)  which enables transfer of a network resources and data, such as html documents, xml, json etc. This infrastruction shows that the client initiates the request to the server and gets back in return a response in one of the mime types requested by it for processing and displays to the user.
+
+###Issues with the simple web infrasturction
+- One of the issue with simple web infrastruction is Single point of failure (SPOF), where if one component of system fails, the apllication can have a downtime due to the fact that there is no backup of the failing component and can be worst if the component is a critical one like application server.
+
+- Another issue is routine maintainance will always result to application downtime. The donwtime can constly depending on the nature of business the application is used.
+
+- Another issue is scale, this web infrastructure can not be scaled up and can suffer performance issues during traffic spikes. This shortcoming can also be exploited by attackers to do DOS attacks to render this infrastructure virtually unsable.
