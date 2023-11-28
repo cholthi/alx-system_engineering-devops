@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Creates RSA key pair
 
-openssl genrsa --aes4096 -passout pass:betty file:school
+ssh-keygen -b 4096 -f school -t rsa -N betty
