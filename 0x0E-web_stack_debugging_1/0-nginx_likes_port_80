@@ -2,4 +2,5 @@
 # Fixes nginx listneing on port 80
 cd /etc/nginx/sites-enabled/ || exit;
 rm default;            
-ln -s /etc/nginx/sites-available/default default;                                                                                             service nginx restart 
+ln -s /etc/nginx/sites-available/default default;
+service nginx restart 
