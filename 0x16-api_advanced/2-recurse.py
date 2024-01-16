@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Contains recurse function"""
 import requests
+import uuid
 
 
 def recurse(subreddit, hot_list=[], after="", count=0):
