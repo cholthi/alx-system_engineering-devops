@@ -1,15 +1,13 @@
 #!/usr/bin/python3
 """Contains top_ten function"""
 import requests
-import uuid
 
 
 def top_ten(subreddit):
     """Print the titles of the 10 hottest posts on a given subreddit."""
     url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
-    id = str(uuid.uuid4())
     headers = {
-        "User-Agent": f"advanced_api/ python3 ({id})"
+        "User-Agent": "advanced_api/ python3 (u/ghost_me)"
     }
     params = {
         "limit": 10
