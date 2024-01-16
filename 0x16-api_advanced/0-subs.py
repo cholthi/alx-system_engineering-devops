@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""provides a function that queries the Reddit API and 
+"""provides a function that queries the Reddit API and
 returns the number of subscribers"""
 import json
 from urllib.request import Request, urlopen
@@ -14,4 +14,3 @@ def number_of_subscribers(subreddit):
     res = urlopen(req)
     jdata = json.load(res)
     return jdata.get('data', {}).get('subscribers', 0)
-
