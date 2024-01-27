@@ -1,0 +1,32 @@
+# place in /etc/systemd/system/whatever.service and install with `systemd install whatever.service`
+# note that if you change this file you will need to run `systemctl daemon-reload` to get systemd to notice
+[Unit]
+Description=A gunicorn server that runs our python application
+
+# After networking because we need that
+After=network.target
+
+[Service]
+
+# Simple services don't do any forking / background nonsence
+Type=simple
+
+# User with which to run the service
+User=ubuntu
+
+# Any setup we need to do, specifying the shell because otherwise who knows what's up
+# ExecStartPre=/bin/bash -c 'echo "hello world"'
+
+# Set the working directory for the application
+WorkingDirectory=/home/ubuntu/AirBnB_clone_v4/
+StandardOutput=/tmp/airbnb-access.log
+StandardError=/tmp/airbnb-error.logirbnb-access.log
+
+# Command to run the application
+ExecStart=gunicorn --workers 3 --bind 0.0.0.0:5003 web_dynamic.2-hbnb:app
+# Restart policy, only on failure
+Restart=always
+
+[Install]
+# Start the service before we get to multi-user mode
+WantedBy=multi-user.target
